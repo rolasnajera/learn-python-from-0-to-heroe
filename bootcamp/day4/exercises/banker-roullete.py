@@ -9,3 +9,10 @@
 # Note: notice that there is a space between the comma and the next name.
 # Example Output
 # Michael is going to buy the meal today!
+
+import random
+
+names = input("Write the names separated by commas and spaces:\n")
+names_list = names.split(", ")
+random_person = random.randint(0, len(names_list) - 1)
+print(f"{names_list[random_person]} must pay the bill.")
