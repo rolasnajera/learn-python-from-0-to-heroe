@@ -14,3 +14,25 @@
 # 
 # Use your knowledge of Python dictionaries and loops to solve this challenge.
 
+import os
+print("Welcome to the secret auction program.")
+players = {}
+more_players = True
+
+while more_players is True:
+    name = input("What is your name?:    ")
+    bid = float(input("What is your bid?:    "))
+    players[name] = bid
+    continue_program = input("Are there any other bidders? 'yes' or 'no' (default 'yes'):   ")
+    if continue_program == "no":
+        more_players = False
+    os.system("clear")
+
+highest = 0
+winner = ""
+for player in players:
+    if players[player] > highest:
+        highest = players[player]
+        winner = player
+
+print(f"The winner is {winner}")
