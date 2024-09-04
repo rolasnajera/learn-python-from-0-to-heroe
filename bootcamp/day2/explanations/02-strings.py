@@ -40,5 +40,5 @@ print(len(input("What is your name?")))
 
 # f-String
 numero = 23
-print(f"algo es de {23}")
+print(f"Something is {23}")
 
